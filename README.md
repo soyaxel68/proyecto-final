@@ -9,7 +9,7 @@ Renombrar el .env.example y colocar lo datos personales.
 ```sh
 mongod --dbpath=<Ruta propia>
 
-mongod --dbpath="D:\_courses\60531-bootcamp-node.js-developer\clase-41\final-project\data"
+mongod --dbpath="C:\Users\axeln\OneDrive\Documentos\Node Js - Curso\ejeercicios\Pruebas\final-project-main"
 ```
 
 > Luego levantar el servidor
