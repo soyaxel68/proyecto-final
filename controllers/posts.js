@@ -20,7 +20,7 @@ const traerPostCards = async (req, res = response) => {
 // INDEX
 const getPosts = async (req, res = response) => {
   try {
-    const posts = await Post.find({}).lean(); // Me deja un obj puro de JS
+    const posts = await Post.find({user: req.user.id}).lean(); // Me deja un obj puro de JS
     //console.log(posts)
     const title = "InfoBlog - Listado de Post";
     res.status(200).render("index", {
@@ -74,6 +74,7 @@ const createPost = async (req, res = response) => {
 
         post.title = req.body.title
         post.body = req.body.body
+        post.user = req.user.id
 
         post = await post.save()
         res.redirect(`/posts/${post.slug}`)

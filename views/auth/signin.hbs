@@ -1,21 +1,55 @@
+{{#if todo_ok}}
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>{{todo_ok}}</strong>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="alert"
+      aria-label="Close"
+    ></button>
+  </div>
+{{/if}}
 
+{{#if todo_error}}
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <strong>{{todo_error}}</strong>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="alert"
+      aria-label="Close"
+    ></button>
+  </div>
+{{/if}}
 
 <div class="col">
-    <form action="/auth/signin" method="POST">
-        {{!-- Correo --}}
-        <div class="form-control">
-            <label for="email" class="form-label">Correo Electronico</label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="Ingrese su correo electronico">
-        </div>
+  <form action="/auth/signin" method="POST">
+    {{! Correo }}
+    <div class="form-control">
+      <label for="email" class="form-label">Correo Electronico</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        name="email"
+        placeholder="Ingrese su correo electronico"
+      />
+    </div>
 
-        {{!-- Password --}}
-        <div class="form-control">
-            <label for="password" class="form-label">Correo Electronico</label>
-            <input type="password" class="form-control" id="password" name="password" placeholder="Ingrese su contraseña">
-        </div>
+    {{! Password }}
+    <div class="form-control">
+      <label for="password" class="form-label">Correo Electronico</label>
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        name="password"
+        placeholder="Ingrese su contraseña"
+      />
+    </div>
 
-        <button class="btn btn-primary">
-            Signin
-        </button>
-    </form>
+    <button class="btn btn-primary">
+      Signin
+    </button>
+  </form>
 </div>

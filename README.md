@@ -107,3 +107,11 @@ npm i connect-mongo express-session passport passport-local
 Conector para persistir la información de la sesión en MONGO
 
 <https://www.npmjs.com/package/connect-mongo>
+
+## Connect Flash
+
+```sh
+npm i connect-flash
+```
+
+https://www.npmjs.com/package/connect-flash
