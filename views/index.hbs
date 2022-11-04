@@ -8,8 +8,8 @@
   <table class="table">
     <thead>
       <tr>
-        <th scope="col">Titulo</th>
-        <th scope="col">Post</th>
+        <th scope="col">Producto</th>
+        <th scope="col">Detalle</th>
         <th scope="col">Acciones</th>
       </tr>
     </thead>
@@ -19,7 +19,7 @@
           <td width="30%">{{this.title}}</td>
           <td width="40%">{{this.body}}</td>
           <td>
-            <a href="/posts/{{this.slug}}" class="btn btn-secondary">Ver</a>
+            <a href="/posts/{{this.slug}}" class="btn btn-secondary m-2">Ver</a>
             <a href="/posts/edit/{{this._id}}" class="btn btn-primary">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +41,7 @@
             </a>
 
             <form action="/posts/{{this._id}}?_method=DELETE" method="POST">
-              <button class="btn btn-danger">
+              <button class="btn btn-danger m-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"

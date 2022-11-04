@@ -1,5 +1,5 @@
 const passport = require('passport')
-const { Strategy } = require('passport-local')
+const { Strategy } = require('passport-local').Strategy
 const Auth = require('../models/auth')
 
 passport.use(
@@ -9,15 +9,15 @@ passport.use(
         },
         async (email, password, done) => {
 
-            const user = await Auth.findOne({ email })
+            const user = await Auth.findOne({ email: email })
 
             if( !user ) {
-                return done(null, false, { message: 'User not found.'})
+                return done(null, false, { message: 'Usuario no encontrado'})
             }
 
             const isMatch = await user.checkPassword(password)
             if ( !isMatch ) {
-                return done(null, false, { message: 'Password error'})
+                return done(null, false, { message: 'Incorrect'})
             }
 
             return done(null, user)

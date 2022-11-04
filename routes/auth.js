@@ -8,7 +8,7 @@ const routerAuth = express.Router()
 routerAuth.get("/auth/signup", showAuthFormSignUp)
 routerAuth.post("/auth/signup", signup)
 
-routerAuth.get('/auth/signin', showAuthFormSignIn)
+routerAuth.get('/auth/signin',  showAuthFormSignIn)
 routerAuth.post('/auth/signin', signin)
 
 routerAuth.get('/auth/profile', isAuthenticated, profile)

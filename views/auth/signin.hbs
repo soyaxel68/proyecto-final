@@ -10,8 +10,9 @@
   </div>
 {{/if}}
 
+
 {{#if todo_error}}
-  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+  <div class="alert alert-success fade show" role="alert">
     <strong>{{todo_error}}</strong>
     <button
       type="button"
@@ -22,7 +23,7 @@
   </div>
 {{/if}}
 
-<div class="col">
+<div class="col mt-3">
   <form action="/auth/signin" method="POST">
     {{! Correo }}
     <div class="form-control">
@@ -38,7 +39,7 @@
 
     {{! Password }}
     <div class="form-control">
-      <label for="password" class="form-label">Correo Electronico</label>
+      <label for="password" class="form-label">Contraseña</label>
       <input
         type="password"
         class="form-control"
@@ -48,8 +49,8 @@
       />
     </div>
 
-    <button class="btn btn-primary">
-      Signin
+    <button class="btn btn-danger mt-3">
+      Iniciar sesión
     </button>
   </form>
 </div>

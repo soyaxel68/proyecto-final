@@ -7,7 +7,7 @@
 {{/if}}
 
 
-<div class="col">
+<div class="col mt-3">
     <form action="/auth/signup" method="POST">
         {{!-- Nombre --}}
         <div class="form-control">
@@ -37,18 +37,18 @@
 
         {{!-- Password --}}
         <div class="form-control">
-            <label for="password" class="form-label">Correo Electronico</label>
+            <label for="password" class="form-label">Contraseña</label>
             <input type="password" class="form-control" id="password" name="password" placeholder="Ingrese su contraseña">
         </div>
 
         {{!-- Confirm Password --}}
         <div class="form-control">
-            <label for="confirm_password" class="form-label">Correo Electronico</label>
+            <label for="confirm_password" class="form-label">Repita su contraseña</label>
             <input type="password" class="form-control" id="confirm_password" name="confirm_password" placeholder="Ingrese repita su contraseña">
         </div>
 
-        <button class="btn btn-primary">
-            Signup
+        <button class="btn btn-primary mt-3">
+            Registrarse
         </button>
     </form>
 </div>
